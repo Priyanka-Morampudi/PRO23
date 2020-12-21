@@ -40,7 +40,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5, {restitution:0.8});
+	packageBody = Bodies.circle(width/2 , 200 , 5);
 	Matter.Body.setStatic(packageBody, true);
 	World.add(world, packageBody);
 	
@@ -80,10 +80,6 @@ function keyPressed() {
  if (keyCode == DOWN_ARROW) {
 	 console.log("down")
 	Matter.Body.setStatic(packageBody, false);
-	   
-	
+
   }
 }
-
-
-
